@@ -93,3 +93,35 @@ body {
     text-decoration-color: rgb(255, 255, 255);
     text-underline-offset: 0.4em;
 }
+
+/* Sermon Page Styling */
+
+.sidebar {
+    height: 100vh;
+    background-color: #343a40;
+    color: #fff;
+    padding-top: 20px;
+}
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+.sidebar a:hover {
+    background-color: #495057;
+}
+.content {
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+.sermon {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+#searchInput {
+    margin-bottom: 20px;
+}
