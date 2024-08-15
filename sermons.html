@@ -34,6 +34,8 @@
         </div>
       </nav>
 
+      <!-- Sermon Database -->
+
       <div class="container-fluid">
         <div class="row">
             <!-- Sidebar -->
@@ -59,19 +61,44 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#sermon5">Sermon 5</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sermon6">Sermon 6</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sermon7">Sermon 7</a>
+                        </li>
                         <!-- Add more sermon links here -->
                     </ul>
                 </div>
             </nav>
     
-            <!-- Content -->
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 content">
-                <a href="https://youtu.be/q_ZZYMhM87E" target="_blank">
-                <div id="sermon1" class="sermon">
-                    <h3>Walk by Faith, not by Sight</h3>
-                    <p>The Different walk of Abraham and Lot - Genesis 13:2-7, 10-13</p>
+            <!-- Dropdown for mobile -->
+            <div class="col-md-3 col-lg-2 d-md-none">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="sermonDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sermons
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="sermonDropdown" id="sermonDropdownList">
+                        <li><a class="dropdown-item" href="#sermon1">Sermon 1</a></li>
+                        <li><a class="dropdown-item" href="#sermon2">Sermon 2</a></li>
+                        <li><a class="dropdown-item" href="#sermon3">Sermon 3</a></li>
+                        <li><a class="dropdown-item" href="#sermon4">Sermon 4</a></li>
+                        <li><a class="dropdown-item" href="#sermon5">Sermon 5</a></li>
+                        <li><a class="dropdown-item" href="#sermon6">Sermon 6</a></li>
+                        <li><a class="dropdown-item" href="#sermon7">Sermon 7</a></li>
+                        <!-- Add more sermon links here -->
+                    </ul>
                 </div>
-                </a>
+            </div>
+    
+            <!-- Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 content" id="sermonContent">
+                <a href="https://youtu.be/q_ZZYMhM87E" class="text-decoration-none text-black" target="_blank">
+                    <div id="sermon1" class="sermon">
+                        <h3>Walk by Faith, not by Sight</h3>
+                        <p>The Different walk of Abraham and Lot - Genesis 13:2-7, 10-13</p>
+                    </div>
+                    </a> 
                 <div id="sermon2" class="sermon">
                     <h3>Sermon 2 Title</h3>
                     <p>Details and content of Sermon 2...</p>
@@ -87,11 +114,20 @@
                 <div id="sermon5" class="sermon">
                     <h3>Sermon 5 Title</h3>
                     <p>Details and content of Sermon 5...</p>
-                </div>w
+                </div>
+                <div id="sermon6" class="sermon">
+                    <h3>Sermon 6 Title</h3>
+                    <p>Details and content of Sermon 6...</p>
+                </div>
+                <div id="sermon7" class="sermon">
+                    <h3>Sermon 7 Title</h3>
+                    <p>Details and content of Sermon 7...</p>
+                </div>
+                <!-- Add more sermon content here -->
             </main>
         </div>
     </div>
-
+                
       <!-- Footer -->
     
       <footer class="p-5 bg-dark footer">
@@ -126,44 +162,6 @@
     <!-- bootstrap javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- main javascript -->
-     <script src="script.js"></script>
-     <script>
-        // JavaScript for search and hiding extra sermons
-        document.addEventListener("DOMContentLoaded", function() {
-            const sermonList = document.getElementById('sermonList');
-            const sermons = sermonList.getElementsByTagName('li');
-            const maxVisible = 3;
-    
-            // Hide sermons after the first 3
-            for (let i = maxVisible; i < sermons.length; i++) {
-                sermons[i].style.display = 'none';
-            }
-    
-            // Search function
-            document.getElementById('searchInput').addEventListener('keyup', function() {
-                let filter = this.value.toUpperCase();
-                let visibleCount = 0;
-    
-                for (let i = 0; i < sermons.length; i++) {
-                    let a = sermons[i].getElementsByTagName('a')[0];
-                    let textValue = a.textContent || a.innerText;
-    
-                    if (textValue.toUpperCase().indexOf(filter) > -1) {
-                        sermons[i].style.display = '';
-                        visibleCount++;
-                    } else {
-                        sermons[i].style.display = 'none';
-                    }
-                }
-    
-                // Hide sermons after the first 3 again if no search is being performed
-                if (filter === "") {
-                    for (let i = maxVisible; i < sermons.length; i++) {
-                        sermons[i].style.display = 'none';
-                    }
-                }
-            });
-        });
-    </script>
+     <script src="sermonscript.js"></script>
 </body>
 </html>
