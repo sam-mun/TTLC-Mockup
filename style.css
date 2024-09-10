@@ -119,13 +119,6 @@ body {
     color:white;
 }
 
-.content {
-    margin-left: 250px; /* Same as sidebar width */
-    padding: 20px;
-    background-color: #f8f9fa;
-    padding-bottom: 60px; /* Ensure content doesn't overlap footer */
-}
-
 .sermon {
     background-color: #fff;
     padding: 15px;

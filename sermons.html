@@ -12,29 +12,27 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary p-5" data-bs-theme="dark">
-      <div class="container-fluid justify-content-center text-center">
-        <a class="navbar-brand text-center fs-1 m-auto" href="index.html"><img src="images/TTLC logo transparent.png" alt=""></a>
-        <a href="index.html" class="navbar-brand text-center fs-1 m-auto">Tucson <font color="#49c0ee">True Light</font> Church</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-          <ul class="navbar-nav ms-auto fs-4 mt-n1">
+        <div class="container-fluid justify-content-center text-center">
+          <a class="navbar-brand text-center fs-1 m-auto" href="index.html"><img src="images/TTLC logo transparent.png" alt=""></a>
+          <a href="index.html" class="navbar-brand text-center fs-1 m-auto">Tucson <font color="#49c0ee">True Light</font> Church</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav ms-auto fs-4 mt-n1">
+                <li class="nav-item">
+                    <a class="nav-link mx-2 text-white" href="index.html">Home</a>
+                </li>
               <li class="nav-item">
-                  <a class="nav-link mx-2 text-white" href="index.html">Home</a>
+                <a class="nav-link mx-2 text-white" href="give.html">Give</a>
               </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2 text-white" href="give.html">Give</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2 text-white" target="_blank" href="https://azttlc.org/">Korean Ministry</a>
-            </li>
-          </ul>
+              <li class="nav-item">
+                <a class="nav-link mx-2 text-white" target="_blank" href="https://azttlc.org/">Korean Ministry</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-
-      <!-- Sermon Database -->
+      </nav>
 
       <div class="container-fluid">
         <div class="row">
@@ -85,64 +83,65 @@
                         <li><a class="dropdown-item" href="#sermon4">Sermon 4</a></li>
                         <li><a class="dropdown-item" href="#sermon5">Sermon 5</a></li>
                         <li><a class="dropdown-item" href="#sermon6">Sermon 6</a></li>
-                        <!-- <li><a class="dropdown-item" href="#sermon7">Sermon 7</a></li> -->
                         <!-- Add more sermon links here -->
                     </ul>
                 </div>
             </div>
+
+      <!-- Main content -->
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mt-4 bg-transparent" id="sermonContent">
+        <!-- Most Recent Message Section -->
+        <section class="most-recent-sermon mb-5 p-4 bg-white border rounded">
+            <h2 class="text-black">Most Recent Message</h2>
+            <a href="https://youtu.be/vB_t1nCxMWQ" class="text-decoration-none text-black" target="_blank">
+                <div id="sermon1" class="sermon">
+                    <h3 class="text-decoration-underline">God's Love for us through His Son, Jesus | 9-8-2024</h3>
+                    <p>Starring Abraham and Isaac - Genesis 22:1-14; Hebrew 11:17-19</p>
+                </div>
+            </a>
+        </section>
+        <!-- Other Sermons -->
+        <a href="https://youtu.be/hUlxzUZOAgs" class="text-decoration-none text-black" target="_blank">
+            <div id="sermon6" class="sermon">
+                <h3 class="text-decoration-underline">Promised Child of Faith is Born 9-1-2024</h3>
+                <p>God Keeps His Promises - Genesis 21:1-7; Romans 4:16-25</p>
+            </div>
+        </a>
+        <a href="https://youtu.be/Jw6xa3U9Q1w" class="text-decoration-none text-black" target="_blank">
+            <div id="sermon5" class="sermon">
+                <h3 class="text-decoration-underline">Victory over Sodom and Gomorrah | 8-25-2024</h3>
+                <p>Forgiveness to New Creation - Jude 1:7-9; Leviticus 26:40-42</p>
+            </div>
+        </a>
+        <a href="https://youtu.be/HpsiahUcc1k" class="text-decoration-none text-black" target="_blank">
+            <div id="sermon4" class="sermon">
+                <h3 class="text-decoration-underline">The Destruction of Sodom and Gomorrah | 8-18-2024</h3>
+                <p>"Sin, when it is fully grown, brings forth death." - Genesis 19:23-26; James 1:12-15</p>
+            </div>
+        </a>
+        <a href="https://youtu.be/2hWikElXJjs" class="text-decoration-none text-black" target="_blank">
+            <div id="sermon3" class="sermon">
+                <h3 class="text-decoration-underline">Walk by Faith, not by Sight | 8-11-2024</h3>
+                <p>The Different Walk of Abraham and Lot - Genesis 13:2-7, 10-13</p>
+            </div>
+        </a>
+        <a href="https://youtu.be/4KpltwBU8xM" class="text-decoration-none text-black" target="_blank">
+            <div id="sermon2" class="sermon">
+                <h3 class="text-decoration-underline">The Power of Prayer | 7-28-2024</h3>
+                <p>God listens to His people - Genesis 18:16-33</p>
+            </div>
+        </a>
+        <!-- <a href="#" class="text-decoration-none text-black" target="_blank">
+            <div id="sermon7" class="sermon">
+                <h3 class="text-decoration-underline">Sermon 7 Title</h3>
+                <p>Details and content of Sermon 7...</p>
+            </div>
+        </a> -->
+        <!-- Add more sermon content here -->
+    </main>
+</div>
+</div>
     
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 content bg-transparent" id="sermonContent">
-                <!-- Most Recent Message Section -->
-                <section class="most-recent-sermon mb-5 p-4 bg-white border rounded">
-                    <h2 class="text-black">Most Recent Message</h2>
-                    <a href="https://youtu.be/vB_t1nCxMWQ" class="text-decoration-none text-black" target="_blank">
-                        <div id="sermon1" class="sermon">
-                            <h3 class="text-decoration-underline">God's Love for us through His Son, Jesus | 9-8-2024</h3>
-                            <p>Starring Abraham and Isaac - Genesis 22:1-14; Hebrew 11:17-19</p>
-                        </div>
-                    </a>
-                </section>
-                <!-- Other Sermons -->
-                <a href="https://youtu.be/hUlxzUZOAgs" class="text-decoration-none text-black" target="_blank">
-                    <div id="sermon6" class="sermon">
-                        <h3 class="text-decoration-underline">Promised Child of Faith is Born 9-1-2024</h3>
-                        <p>God Keeps His Promises - Genesis 21:1-7; Romans 4:16-25</p>
-                    </div>
-                </a>
-                <a href="https://youtu.be/Jw6xa3U9Q1w" class="text-decoration-none text-black" target="_blank">
-                    <div id="sermon5" class="sermon">
-                        <h3 class="text-decoration-underline">Victory over Sodom and Gomorrah | 8-25-2024</h3>
-                        <p>Forgiveness to New Creation - Jude 1:7-9; Leviticus 26:40-42</p>
-                    </div>
-                </a>
-                <a href="https://youtu.be/HpsiahUcc1k" class="text-decoration-none text-black" target="_blank">
-                    <div id="sermon4" class="sermon">
-                        <h3 class="text-decoration-underline">The Destruction of Sodom and Gomorrah | 8-18-2024</h3>
-                        <p>"Sin, when it is fully grown, brings forth death." - Genesis 19:23-26; James 1:12-15</p>
-                    </div>
-                </a>
-                <a href="https://youtu.be/2hWikElXJjs" class="text-decoration-none text-black" target="_blank">
-                    <div id="sermon3" class="sermon">
-                        <h3 class="text-decoration-underline">Walk by Faith, not by Sight | 8-11-2024</h3>
-                        <p>The Different Walk of Abraham and Lot - Genesis 13:2-7, 10-13</p>
-                    </div>
-                </a>
-                <a href="https://youtu.be/4KpltwBU8xM" class="text-decoration-none text-black" target="_blank">
-                    <div id="sermon2" class="sermon">
-                        <h3 class="text-decoration-underline">The Power of Prayer | 7-28-2024</h3>
-                        <p>God listens to His people - Genesis 18:16-33</p>
-                    </div>
-                </a>
-                <!-- <a href="#" class="text-decoration-none text-black" target="_blank">
-                    <div id="sermon7" class="sermon">
-                        <h3 class="text-decoration-underline">Sermon 7 Title</h3>
-                        <p>Details and content of Sermon 7...</p>
-                    </div>
-                </a> -->
-                <!-- Add more sermon content here -->
-            </main>
-        </div>
-    </div>
                 
       <!-- Footer -->
     
