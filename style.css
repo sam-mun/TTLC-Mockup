@@ -20,7 +20,7 @@ body {
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
     border-radius: 5px;
     position: relative;
-    z-index: 1;
+    z-index: 1030;
     background: inherit;
     overflow: hidden;
 }
@@ -104,10 +104,9 @@ body {
 }
 
 .sidebar {
-    height: 123vh;
-    background-color: #343a40;
-    color: #fff;
-    padding-top: 20px;
+    position: sticky;
+    top: 80px;
+    z-index: 1020;
 }
 .sidebar a {
     color: white;
@@ -119,10 +118,14 @@ body {
     background-color: #495057;
     color:white;
 }
+
 .content {
+    margin-left: 250px; /* Same as sidebar width */
     padding: 20px;
     background-color: #f8f9fa;
+    padding-bottom: 60px; /* Ensure content doesn't overlap footer */
 }
+
 .sermon {
     background-color: #fff;
     padding: 15px;
@@ -175,4 +178,11 @@ body {
 
 .dropdown-item:last-child {
     border-bottom: none;
+}
+
+.footer {
+    position: relative; /* Ensure footer stays at the bottom of the page */
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
 }
