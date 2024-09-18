@@ -1,8 +1,8 @@
-// Sermon Page JavaScript
 document.addEventListener("DOMContentLoaded", function () {
     console.log("JavaScript is running!");
+
     const sermons = document.querySelectorAll('.sermon');
-    console.log("Found sermons:", sermons);
+    const searchInput = document.querySelector('#searchInput');
     const maxVisibleSermons = 6; // Set the cutoff point here
 
     // Initially hide sermons beyond the cutoff
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Create "Show More" button
     if (sermons.length > maxVisibleSermons) {
-        showMoreButton = document.createElement('button');
+        const showMoreButton = document.createElement('button');
         showMoreButton.textContent = 'Show More';
         showMoreButton.classList.add('btn', 'btn-dark', 'mt-3', 'mb-3');
 
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
             showMoreButton.style.display = 'none'; // Hide "Show More" button
 
             // Create "Show Less" button
-            showLessButton = document.createElement('button');
+            const showLessButton = document.createElement('button');
             showLessButton.textContent = 'Show Less';
             showLessButton.classList.add('btn', 'btn-light', 'mt-3', 'mb-3', 'm-auto');
             sermonContent.appendChild(showLessButton);
@@ -44,4 +44,20 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
+
+    // Search functionality
+    searchInput.addEventListener('input', function () {
+        const searchValue = searchInput.value.toLowerCase();
+
+        sermons.forEach(sermon => {
+            const title = sermon.querySelector('h3').textContent.toLowerCase();
+            const content = sermon.querySelector('p').textContent.toLowerCase();
+
+            if (title.includes(searchValue) || content.includes(searchValue)) {
+                sermon.style.display = 'block'; // Show the sermon if it matches
+            } else {
+                sermon.style.display = 'none'; // Hide if no match
+            }
+        });
+    });
 });
