@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (sermons.length > maxVisibleSermons) {
         showMoreButton = document.createElement('button');
         showMoreButton.textContent = 'Show More';
-        showMoreButton.classList.add('btn', 'btn-primary', 'mt-3');
+        showMoreButton.classList.add('btn', 'btn-dark', 'mt-3', 'mb-3');
 
         const sermonContent = document.querySelector('#sermonContent');
         sermonContent.appendChild(showMoreButton);
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Create "Show Less" button
             showLessButton = document.createElement('button');
             showLessButton.textContent = 'Show Less';
-            showLessButton.classList.add('btn', 'btn-secondary', 'mt-3');
+            showLessButton.classList.add('btn', 'btn-light', 'mt-3', 'mb-3', 'm-auto');
             sermonContent.appendChild(showLessButton);
 
             showLessButton.addEventListener('click', () => {
