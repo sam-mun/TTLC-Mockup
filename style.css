@@ -184,3 +184,40 @@ body {
 .aboutush1 {
     color: #49c0ee;
 }
+
+/* Service Times */
+.service-times {
+    gap: 2rem;
+  }
+  
+  .service-card {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc; /* Optional border to resemble a card */
+    border-radius: 10px;
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .service-times {
+      justify-content: center;
+      gap: 1rem;
+    }
+  
+    .service-card {
+      font-size: 0.9rem;
+      padding: 8px;
+      flex: 1; /* This ensures the cards shrink to fit the space */
+      border: 1px solid #343a40; /* Dark border to match footer background */
+      background-color: #343a40;
+    }
+  
+    .service-card strong {
+      display: block;
+      margin-top: 5px;
+    }
+  
+    .service-card p {
+      margin: 0;
+    }
+  }
