@@ -121,38 +121,50 @@
                 <h5 class="card-title fw-bold fs-4">Church News</h5>
               </div>
             </div>
-      </a>
-      </div>
+      	</a>
+      	</div>
 
-      <!-- <div class="container py-5">
-        <div class="row text-center">
-          <div class="col-md-6 mb-4">
-            <div class="p-5 bg-light rounded-3">
-              <h2 class="fw-bold fs-2">New to TTLC?</h2>
-              <p class="fs-4">We'd love to get in touch with you! Sign up below to receive more information.</p>
-              <form action="https://formspree.io/f/movazgjp" method="POST">
-                <div class="input-group">
-                  <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
-                  <button class="btn btn-primary" type="submit">Submit</button>
-                </div>
-              </form>
-            </div>
-          </div>
+		<!-- Toast container -->
+		<div id="eventToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+			<div class="toast-header">
+				<strong class="me-auto">Upcoming Event!</strong>
+				<small>Now</small>
+				<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+			</div>
+			<div class="toast-body">
+				Don't miss our Church Picnic on Oct 27th! <br> Visit the Church News page for more info.
+			</div>
+		</div>
 
-          <div class="col-md-6 mb-4">
-            <div class="p-5 bg-secondary rounded-3 text-white">
-              <h2 class="fw-bold fs-2">Get Involved</h2>
-              <p class="fs-4">Join our ministries, volunteer opportunities, and events. Stay connected by signing up below!</p>
-              <form action="https://formspree.io/f/xgvwbgor" method="POST">
-                <div class="input-group">
-                  <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
-                  <button class="btn btn-light" type="submit">Sign Up</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div> -->
+		<!-- <div class="container py-5">
+			<div class="row text-center">
+			<div class="col-md-6 mb-4">
+				<div class="p-5 bg-light rounded-3">
+				<h2 class="fw-bold fs-2">New to TTLC?</h2>
+				<p class="fs-4">We'd love to get in touch with you! Sign up below to receive more information.</p>
+				<form action="https://formspree.io/f/movazgjp" method="POST">
+					<div class="input-group">
+					<input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+					<button class="btn btn-primary" type="submit">Submit</button>
+					</div>
+				</form>
+				</div>
+			</div>
+
+			<div class="col-md-6 mb-4">
+				<div class="p-5 bg-secondary rounded-3 text-white">
+				<h2 class="fw-bold fs-2">Get Involved</h2>
+				<p class="fs-4">Join our ministries, volunteer opportunities, and events. Stay connected by signing up below!</p>
+				<form action="https://formspree.io/f/xgvwbgor" method="POST">
+					<div class="input-group">
+					<input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+					<button class="btn btn-light" type="submit">Sign Up</button>
+					</div>
+				</form>
+				</div>
+			</div>
+			</div>
+		</div> -->
 
     <!-- Footer -->
 
@@ -203,6 +215,15 @@
       </div>
     </footer>
 
+	<script>
+		// Automatically show the toast after a small delay
+		document.addEventListener("DOMContentLoaded", function() {
+			var eventToast = new bootstrap.Toast(document.getElementById('eventToast'));
+			setTimeout(function() {
+			eventToast.show();
+			}, 1000); // Show after 1 second
+		});
+	</script>
 
     <!-- bootstrap javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
