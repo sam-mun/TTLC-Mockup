@@ -1,241 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Church Events / News - Tucson True Light Church</title>
-    <link rel="apple-touch-icon" sizes="76x76" href="/em/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/em/mages/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/em/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/em/images/favicon/site.webmanifest">
-    <link rel="mask-icon" href="/em/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="/em/css/style.css">
-    <!-- Bootstrap CSS Link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Church Events / News - Tucson True Light Church</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="76x76" href="../images/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="../images/favicon/site.webmanifest" />
+  <link rel="mask-icon" href="../images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 </head>
 <body>
-    <!-- Navbar -->
-	<nav class="navbar navbar-expand-lg p-3 bg-black bg-opacity-75" data-bs-theme="dark">
-		<div class="container-fluid justify-content-center text-center">
-		<a class="navbar-brand d-flex align-items-center justify-content-center m-0" href="/">
-			<img src="/em/images/TTLC logo transparent.png" alt="TTLC Logo" style="height: 40px;">
-		</a>
-		<a href="/em/" class="navbar-brand text-center m-auto">
-			Tucson <font color="#49c0ee">True Light</font> Church
-		</a>
-	
-		<!-- Mobile Menu Toggler (No Bootstrap toggle attributes) -->
-		<button class="navbar-toggler custom-toggler" type="button">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-	
-		<!-- Desktop Menu -->
-		<div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="navbarNav">
-			<ul class="navbar-nav ms-auto mt-n1">
-			<li class="nav-item dropdown" style="position: relative;">
-				<a class="nav-link dropdown-toggle mx-2 text-white" href="#" id="dropdownMenuLink" role="button">
-				Ministries
-				</a>
-				<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-				<li><a class="dropdown-item" href="/em/pages/housechurch.html">House Church</a></li>
-				<li><a class="dropdown-item" href="/em/pages/youth.html">Youth</a></li>
-				<li><a class="dropdown-item" href="/em/pages/mission.html">Missions</a></li>
-				</ul>
-			</li>
-			<li class="nav-item dropdown" style="position: relative;">
-				<a class="nav-link dropdown-toggle mx-2 text-white" href="#" id="dropdownMenuLink" role="button">
-				Watch
-				</a>
-				<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-				<li><a class="dropdown-item" href="/em/sermons/">Sermons</a></li>
-				</ul>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link mx-2 text-white" href="/em/about/">About Us</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link mx-2 text-white" href="/em/construction.html">Give</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link mx-2 text-white" href="https://azttlc.org/">Korean Ministry</a>
-			</li>
-			</ul>
-		</div>
-		</div>
-	</nav>
-	
-	<!-- Mobile Overlay & Slide Menu -->
-	<div id="mobileMenuOverlay" class="mobile-overlay"></div>
-	
-	<div id="mobileMenu" class="mobile-menu">
-		<button id="closeMobileMenu" class="close-btn">&times;</button>
-	  
-		<!-- Ministries Section -->
-		<div class="mobile-menu-section">
-		  <h6 class="menu-label">Ministries</h6>
-		  <ul class="mobile-menu-items">
-			<li><a href="/em/pages/housechurch.html">House Church</a></li>
-			<li><a href="/em/pages/youth.html">Youth</a></li>
-			<li><a href="/em/pages/mission.html">Missions</a></li>
-		  </ul>
-		</div>
-	  
-		<!-- Watch Section -->
-		<div class="mobile-menu-section">
-		  <h6 class="menu-label">Watch</h6>
-		  <ul class="mobile-menu-items">
-			<li><a href="/em/sermons.html">Sermons</a></li>
-		  </ul>
-		</div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg p-3 bg-black bg-opacity-75" data-bs-theme="dark">
+    <div class="container-fluid justify-content-center text-center">
+      <a class="navbar-brand d-flex align-items-center justify-content-center m-0" href="../">
+        <img src="../images/TTLC logo transparent.png" alt="TTLC Logo" style="height: 40px;" />
+      </a>
+      <a href="../" class="navbar-brand text-center m-auto">
+        Tucson <font color="#49c0ee">True Light</font> Church
+      </a>
 
-		<!-- About Us Section -->
-		<div class="mobile-menu-section">
-			<h6 class="menu-label">About Us</h6>
-			<ul class="mobile-menu-items">
-			  <li><a href="/em/about.html">Who We Are</a></li>
-			</ul>
-		  </div>
-	  
-		<!-- Giving Section -->
-		<div class="mobile-menu-section">
-		  <h6 class="menu-label">Giving</h6>
-		  <ul class="mobile-menu-items">
-			<li><a href="/em/construction.html">Give Now</a></li>
-		  </ul>
-		</div>
-	  
-		<!-- Korean Ministry Section -->
-		<div class="mobile-menu-section">
-		  <h6 class="menu-label">Other</h6>
-		  <ul class="mobile-menu-items">
-			<li><a href="https://azttlc.org/" target="_blank">Korean Ministry</a></li>
-		  </ul>
-		</div>
-	  </div>
+      <button class="navbar-toggler custom-toggler" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <section class="bg-transparent py-5 mt-5">
-      <div class="container text-center text-light">
+      <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="navbarNav">
+        <ul class="navbar-nav ms-auto mt-n1">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle mx-2 text-white" href="#" role="button" id="dropdownMenuLink">
+              Ministries
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="../pages/housechurch.html">House Church</a></li>
+              <li><a class="dropdown-item" href="../pages/youth.html">Youth</a></li>
+              <li><a class="dropdown-item" href="../pages/mission.html">Missions</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle mx-2 text-white" href="#" id="dropdownMenuLink" role="button">
+              Watch
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="../sermons/">Sermons</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-white" href="../about/">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-white" href="../construction.html">Give</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-white" href="https://azttlc.org/">Korean Ministry</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Overlay & Slide Menu -->
+  <div id="mobileMenuOverlay" class="mobile-overlay"></div>
+  <div id="mobileMenu" class="mobile-menu">
+    <button id="closeMobileMenu" class="close-btn">&times;</button>
+
+    <div class="mobile-menu-section">
+      <h6 class="menu-label">Ministries</h6>
+      <ul class="mobile-menu-items">
+        <li><a href="../pages/housechurch.html">House Church</a></li>
+        <li><a href="../pages/youth.html">Youth</a></li>
+        <li><a href="../pages/mission.html">Missions</a></li>
+      </ul>
+    </div>
+    <div class="mobile-menu-section">
+      <h6 class="menu-label">Watch</h6>
+      <ul class="mobile-menu-items">
+        <li><a href="../sermons/">Sermons</a></li>
+      </ul>
+    </div>
+    <div class="mobile-menu-section">
+      <h6 class="menu-label">About Us</h6>
+      <ul class="mobile-menu-items">
+        <li><a href="../about/">Who We Are</a></li>
+      </ul>
+    </div>
+    <div class="mobile-menu-section">
+      <h6 class="menu-label">Giving</h6>
+      <ul class="mobile-menu-items">
+        <li><a href="../construction.html">Give Now</a></li>
+      </ul>
+    </div>
+    <div class="mobile-menu-section">
+      <h6 class="menu-label">Other</h6>
+      <ul class="mobile-menu-items">
+        <li><a href="https://azttlc.org/" target="_blank">Korean Ministry</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Events Section -->
+  <section class="bg-transparent py-5 mt-5">
+    <div class="container text-center text-light">
       <h1 class="fw-bolder display-4">CHURCH EVENTS / NEWS</h1>
       <p class="lead fw-bold">Check out our previous & current events here</p>
-      </div>
+    </div>
   </section>
 
-    <main class="ms-sm-auto px-md-4 mt-4 bg-transparent">
-        <!-- Church Events -->
-        <section class="mb-5 p-4 bg-white border rounded">
-            <h2 class="text-black text-decoration-underline">Past Event</h2>
-              <div class="container">
-                <div class="news" data-bs-toggle="modal" data-bs-target="#eventModal1">
-                  <h3 class="text-decoration-underline mb-3">Church Picnic - October 27th, 2024</h3>
-                  <p>Location : Brandi Fenton Memorial Park - Ramada #2 <br> Time : 11:00 AM <br> Activities : Worship, Lunch, Games & Prizes</p>
-                </div>
-              </div>        
-        </section>
-    </main>
-
-    <!-- Modal for Event 1 -->
-    <div class="modal fade" id="eventModal1" tabindex="-1" aria-labelledby="eventModal1Label" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="eventModal1Label">Church Picnic 10/27/2024</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <!-- Carousel for Event Images -->
-            <div id="eventCarousel1" class="carousel slide event-carousel mb-3" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="/em/images/ChurchNews/Picnic-10:27:24/IMG_1702.JPG" class="d-block w-100" alt="Image 1">
-                </div>
-                <div class="carousel-item">
-                  <img src="/em/images/ChurchNews/Picnic-10:27:24/IMG_1710.JPG" class="d-block w-100" alt="Image 2">
-                </div>
-                <div class="carousel-item">
-                  <img src="/em/images/ChurchNews/Picnic-10:27:24/IMG_1727.JPG" class="d-block w-100" alt="Image 3">
-                </div>
-                <div class="carousel-item">
-                  <img src="/em/images/ChurchNews/Picnic-10:27:24/IMG_1732.JPG" class="d-block w-100" alt="Image 4">
-                </div>
-                <div class="carousel-item">
-                  <img src="/em/images/ChurchNews/Picnic-10:27:24/IMG_1733.JPG" class="d-block w-100" alt="Image 5">
-                </div>
-                <div class="carousel-item">
-                  <img src="/em/images/ChurchNews/Picnic-10:27:24/IMG_1737.JPG" class="d-block w-100" alt="Image 6">
-                </div>
-                <div class="carousel-item">
-                  <img src="/em/images/ChurchNews/Picnic-10:27:24/IMG_1705.JPG" class="d-block w-100" alt="Image 7">
-                </div>
-                <!-- Add more carousel items as needed -->
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#eventCarousel1" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#eventCarousel1" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-  
-            <!-- Event Details -->
-            <h4>Church Picnic Highlights</h4>
-            <p>Date: October 27th, 2024</p>
-            <p>Location: Brandi Fenton Memorial Park</p>
-            <p>Worship, Lunch, Games & Prizes</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
+  <main class="ms-sm-auto px-md-4 mt-4 bg-transparent">
+    <section class="mb-5 p-4 bg-white border rounded">
+      <h2 class="text-black text-decoration-underline">Past Event</h2>
+      <div class="container">
+        <div class="news" data-bs-toggle="modal" data-bs-target="#eventModal1">
+          <h3 class="text-decoration-underline mb-3">Church Picnic - October 27th, 2024</h3>
+          <p>Location : Brandi Fenton Memorial Park - Ramada #2 <br> Time : 11:00 AM <br> Activities : Worship, Lunch, Games & Prizes</p>
         </div>
       </div>
-      </div>
-    
-   <!-- Footer -->
+    </section>
+  </main>
 
-    <footer class="p-5 bg-dark footer">
-        <div class="container text-white">
-          <div class="row">
-              <div class="col-lg-6 pt-5">
-                  <p>Contact : </p>
-                  <p>Senior Pastor : Luke Pak</p>
-                  <p>Educational & English Minister : KC Mun</p>
-                  <p>EM Bible Study Pastor : Ken Kemp</p>
-                  <a href="mailto: tucsontruelightchurch@gmail.com" class="footer-hover text-white">
-                      <p>Email: tucsontruelightchurch@gmail.com</p>
-                  </a>
-                  <a href="tel: 520-571-8770" class="footer-hover text-white">
-                      <p>Tel: 520-571-8770</p>
-                  </a>
-                  <a href="https://www.google.com/maps/place/Tucson+True+Light+Church/@32.2350052,-110.8919737,15z/data=!3m1!4b1!4m6!3m5!1s0x86d66fb4060d30ad:0x6c55d59bd69d65d2!8m2!3d32.2350065!4d-110.8735199!16s%2Fg%2F1tl4dgpl?entry=ttu" target="_blank" class="footer-hover text-white">
-                      <p>Address: 5550 E. 1st St. Tucson AZ 85711</p>
-                  </a>
-              </div>
-              <div class="col-lg-6 pt-5 container-fluid">
-                  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                    <iframe 
-					  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3374.857377420757!2d-110.87351989999999!3d32.2350065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86d66fb4060d30ad%3A0x6c55d59bd69d65d2!2sTucson%20True%20Light%20Church!5e0!3m2!1sen!2sus!4v1718823478251!5m2!1sen!2sus" 
-					  style="position: absolute; top: 0; left: 0; width: 90%; height: 90%; border: 0;" 
-					  allowfullscreen="" 
-					  loading="lazy" 
-					  referrerpolicy="no-referrer-when-downgrade" 
-					  class="rounded-5 container">
-					</iframe>
-                  </div>
-              </div>
-              <a class="text-secondary m-auto text-center text-decoration-none mt-3" href="/em/">Tucson True Light Church</a>
+  <!-- Modal -->
+  <div class="modal fade" id="eventModal1" tabindex="-1" aria-labelledby="eventModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="eventModal1Label">Church Picnic 10/27/2024</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="eventCarousel1" class="carousel slide event-carousel mb-3" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="../images/ChurchNews/Picnic-10:27:24/IMG_1702.JPG" class="d-block w-100" alt="Image 1" /></div>
+              <div class="carousel-item"><img src="../images/ChurchNews/Picnic-10:27:24/IMG_1710.JPG" class="d-block w-100" alt="Image 2" /></div>
+              <div class="carousel-item"><img src="../images/ChurchNews/Picnic-10:27:24/IMG_1727.JPG" class="d-block w-100" alt="Image 3" /></div>
+              <div class="carousel-item"><img src="../images/ChurchNews/Picnic-10:27:24/IMG_1732.JPG" class="d-block w-100" alt="Image 4" /></div>
+              <div class="carousel-item"><img src="../images/ChurchNews/Picnic-10:27:24/IMG_1733.JPG" class="d-block w-100" alt="Image 5" /></div>
+              <div class="carousel-item"><img src="../images/ChurchNews/Picnic-10:27:24/IMG_1737.JPG" class="d-block w-100" alt="Image 6" /></div>
+              <div class="carousel-item"><img src="../images/ChurchNews/Picnic-10:27:24/IMG_1705.JPG" class="d-block w-100" alt="Image 7" /></div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#eventCarousel1" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#eventCarousel1" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
+
+          <h4>Church Picnic Highlights</h4>
+          <p>Date: October 27th, 2024</p>
+          <p>Location: Brandi Fenton Memorial Park</p>
+          <p>Worship, Lunch, Games & Prizes</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
       </div>
-    </footer>
+    </div>
+  </div>
 
+  <!-- Footer -->
+  <footer class="p-5 bg-dark footer">
+    <div class="container text-white">
+      <div class="row">
+        <div class="col-lg-6 pt-5">
+          <p>Contact:</p>
+          <p>Senior Pastor: Luke Pak</p>
+          <p>Educational & English Minister: KC Mun</p>
+          <p>EM Bible Study Pastor: Ken Kemp</p>
+          <a href="mailto:tucsontruelightchurch@gmail.com" class="footer-hover text-white"><p>Email: tucsontruelightchurch@gmail.com</p></a>
+          <a href="tel:520-571-8770" class="footer-hover text-white"><p>Tel: 520-571-8770</p></a>
+          <a href="https://www.google.com/maps/place/Tucson+True+Light+Church/@32.2350052,-110.8919737,15z" target="_blank" class="footer-hover text-white">
+            <p>Address: 5550 E. 1st St. Tucson AZ 85711</p>
+          </a>
+        </div>
+        <div class="col-lg-6 pt-5 container-fluid">
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3374.857377420757!2d-110.87351989999999!3d32.2350065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86d66fb4060d30ad%3A0x6c55d59bd69d65d2!2sTucson%20True%20Light%20Church!5e0!3m2!1sen!2sus!4v1718823478251!5m2!1sen!2sus"
+              style="position: absolute; top: 0; left: 0; width: 90%; height: 90%; border: 0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="rounded-5 container"
+            ></iframe>
+          </div>
+        </div>
+        <a class="text-secondary m-auto text-center text-decoration-none mt-3" href="../">Tucson True Light Church</a>
+      </div>
+    </div>
+  </footer>
 
-
-    <!-- bootstrap javascript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- main javascript -->
-     <script src="/em/js/script.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>
