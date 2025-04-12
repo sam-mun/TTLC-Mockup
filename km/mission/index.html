@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Committed to making disciples of all nations, valuing all people as created in God's image, and glorifying God in everything we do.">
     <meta name="keywords" content="korean church tucson, korean church tucson az, korean church tucson arizona, korean american church tucson, koraen american church tucson az, korean american church, korean, church tucson, church tucson arizona, church tucson az, korean church, korean baptist church, best korean church in tucson arizona, best korean church in tucson, korean american baptist church tucson">
-    <title>설교 모음 - 투산 참빛 교회</title>
+    <title>전도사 - 투산 참빛 교회</title>
     <link rel="apple-touch-icon" sizes="76x76" href="/em/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/em/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/em/images/favicon/favicon-16x16.png">
@@ -70,7 +70,6 @@
 		</div>
 		</div>
 	</nav>
-	
 	<!-- Mobile Overlay & Slide Menu -->
 	<div id="mobileMenuOverlay" class="mobile-overlay"></div>
 	
@@ -121,127 +120,74 @@
 		</div>
 	  </div>
 
-<!-- SERMONS -->
+<!-- hero -->
+<section class="bg-transparent py-5 mt-5">
+	<div class="container text-center text-light">
+	<h1 class="fw-bolder display-1">전도사</h1>
+	<p class="lead fw-bold">선교지안내</p>
+	</div>
+</section>
+<div class="container-fluid">
+	<div class="table-responsive">
+		<table class="table table-bordered align-middle text-center">
+		  <thead class="table-light">
+			<tr>
+			  <th scope="col">가정교회</th>
+			  <th scope="col">선교지</th>
+			  <th scope="col">선교사역</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr>
+			  <td><strong>니카라과야</strong><br><small>(목자: 김채수)</small></td>
+			  <td>니카라과</td>
+			  <td>니카라과 선교 (박성도선교사), 신학교 및 지역 교회 지원</td>
+			</tr>
+			<tr>
+			  <td><strong>반둥</strong><br><small>(목자/목녀: 윤기연/윤미연)</small></td>
+			  <td>인도네시아</td>
+			  <td>인도네시아 선교 (김봉환선교사)</td>
+			</tr>
+			<tr>
+			  <td><strong>북한</strong><br><small>(목자: 이승희)</small></td>
+			  <td>북한 및 극동지역</td>
+			  <td>극동 지역 (이사야/조한나 선교사) 및 북한 선교</td>
+			</tr>
+			<tr>
+			  <td><strong>엘림</strong><br><small>(목자: 김사라)</small></td>
+			  <td>미국 투산</td>
+			  <td>대학 캠퍼스 선교, 난민 선교</td>
+			</tr>
+			<tr>
+			  <td><strong>티벳</strong><br><small>(목자/목녀: 전현식/전양선)</small></td>
+			  <td>티벳</td>
+			  <td>티벳 선교 (IMB)</td>
+			</tr>
+			<tr>
+			  <td><strong>Disciples of Tucson</strong><br><small>(Ken Kemp/외덕 Kemp)</small></td>
+			  <td>인도, 국내선교</td>
+			  <td>마다가르 가정교회와 협력 인도 선교 및 투산 선교</td>
+			</tr>
+			<tr>
+			  <td><strong>치앙마이</strong><br><small>(목자: Robin Grumbles)</small></td>
+			  <td>타일랜드</td>
+			  <td>태국 선교 (Rich/Cynthia Bystrzycki)</td>
+			</tr>
+			<tr>
+			  <td><strong>마다가르르</strong><br><small>(Glenn/명자 Grumbles)</small></td>
+			  <td>인도</td>
+			  <td>인도 선교 (불가촉천민 대상)</td>
+			</tr>
+			<tr>
+			  <td><strong>예루살렘</strong><br><small>(목자: 장지순)</small></td>
+			  <td>니카라과</td>
+			  <td>마나구아 극빈자 대상 선교 (정석훈 선교사)</td>
+			</tr>
+		  </tbody>
+		</table>
+	  </div>	  
+</div>
 
-<div class="container my-5">
-    <h1 class="text-center text-white display-1 mb-4 fw-bolder">설교 모음</h1>
-    <p class="text-center mb-4 text-light fs-3">과거 설교를 이곳에서 들을 수 있습니다</p>
-  
-    <!-- Search -->
-    <div class="mb-4">
-      <input type="text" id="searchInput" class="form-control" placeholder="설교 검색..." onkeyup="filterSermons()">
-    </div>
-  
-    <!-- Sermon Cards -->
-    <div id="sermonList" class="row row-cols-1 row-cols-md-2 g-4">
-      <!-- Sermon cards will be injected here -->
-    </div>
-  
-    <!-- Pagination -->
-    <nav>
-      <ul class="pagination justify-content-center mt-4" id="pagination"></ul>
-    </nav>
-  </div>
-  
-  <script>
-    // Your sermon data – add as many as you like here
-    let sermons = [];
-    let filteredSermons = [];
-    let currentPage = 1;
-    const sermonsPerPage = 8;
-
-    const list = document.getElementById('sermonList');
-    const pagination = document.getElementById('pagination');
-    const searchInput = document.getElementById('searchInput');
-
-    // Load the JSON data
-    fetch('sermons.json')
-    .then(res => res.json())
-    .then(data => {
-        sermons = data;
-        filteredSermons = [...sermons];
-        renderSermons();
-    });
-
-    // Search handling
-    searchInput.addEventListener('input', () => {
-    const keyword = searchInput.value.toLowerCase();
-    filteredSermons = sermons.filter(s =>
-        s.title.toLowerCase().includes(keyword) ||
-        s.date.toLowerCase().includes(keyword) ||
-        s.scripture.toLowerCase().includes(keyword)
-    );
-    currentPage = 1;
-    renderSermons();
-    });
-
-
-  function renderSermons() {
-    list.innerHTML = '';
-    const start = (currentPage - 1) * sermonsPerPage;
-    const end = start + sermonsPerPage;
-    const current = filteredSermons.slice(start, end);
-
-    current.forEach(sermon => {
-      const col = document.createElement('div');
-      col.className = 'col sermon-card';
-      col.innerHTML = `
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">${sermon.title} - ${sermon.date}</h5>
-            <p class="card-text">본문: ${sermon.scripture}</p>
-            <audio controls class="w-100">
-              <source src="${sermon.audio}" type="audio/mpeg">
-              브라우저가 오디오를 지원하지 않습니다.
-            </audio>
-          </div>
-        </div>
-      `;
-      list.appendChild(col);
-    });
-
-    renderPagination();
-  }
-
-  function renderPagination() {
-    const pageCount = Math.ceil(filteredSermons.length / sermonsPerPage);
-    pagination.innerHTML = '';
-
-    if (pageCount <= 1) return;
-
-    for (let i = 1; i <= pageCount; i++) {
-      const li = document.createElement('li');
-      li.className = `page-item ${i === currentPage ? 'active' : ''}`;
-      li.innerHTML = `<a class="page-link" href="#">${i}</a>`;
-      li.addEventListener('click', function (e) {
-        e.preventDefault();
-        currentPage = i;
-        renderSermons();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-      pagination.appendChild(li);
-    }
-  }
-
-  function filterSermons() {
-    const keyword = searchInput.value.toLowerCase();
-    filteredSermons = sermons.filter(s =>
-      s.title.toLowerCase().includes(keyword) ||
-      s.date.toLowerCase().includes(keyword) ||
-      s.scripture.toLowerCase().includes(keyword)
-    );
-    currentPage = 1;
-    renderSermons();
-  }
-
-  // Events
-  searchInput.addEventListener('input', filterSermons);
-
-  // Init
-  renderSermons();
-</script>
-  
-  
 <!-- Footer -->
 
 <footer class="p-5 bg-dark footer">

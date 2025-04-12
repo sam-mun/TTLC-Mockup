@@ -1,362 +1,400 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-*{
-    font-family: "Lato", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    font-optical-sizing: auto;
-    text-transform: uppercase;
-}
-
-body {
-    background-image:url(/em/images/Tucson-Arizona.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-.navbar {
-    backdrop-filter: none; /* No blur */
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 1030;
-    overflow: visible; /* Important: lets dropdowns show */
-}
-
-.navbar-brand {
-    font-size: 2rem;
-}
-
-.nav-item .dropdown-item {
-    font-size: .9rem;
-}
-
-.navbar .nav-item {
-    text-decoration: underline 0.15em transparent;
-    text-underline-offset: 0.2em;
-    transition: text-decoration-color 300ms, text-underline-offset 300ms;
-    font-weight: 600;
-}
-
-.navbar .nav-item:hover {
-    text-decoration-color: rgb(255, 255, 255);
-    text-underline-offset: 0.4em;
-}
-
-/* Dropdown on hover */
-.nav-item.dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
-}
-
-/* Make dropdown visible and above everything */
-.dropdown-menu {
-    z-index: 9999;
-    position: absolute;
-}
-
-/* overlay */
-.mobile-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0); /* Start transparent */
-  z-index: 1040;
-  opacity: 0;
-  visibility: hidden;
-  transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-.mobile-overlay.show {
-  background-color: rgba(0, 0, 0, 0.5); /* Tinted color */
-  opacity: 1;
-  visibility: visible;
-}
-  
-
-  .mobile-menu {
-    position: fixed;
-    top: 0;
-    right: -300px;
-    width: 250px;
-    height: 100%;
-    background: white;
-    z-index: 1050;
-    transition: right 0.3s ease;
-    padding: 1.5rem;
-    box-shadow: -2px 0 6px rgba(0, 0, 0, 0.2);
+  *{
+      font-family: "Lato", sans-serif;
+      font-weight: 900;
+      font-style: normal;
+      font-optical-sizing: auto;
+      text-transform: uppercase;
   }
 
-  .mobile-menu.show {
-    right: 0;
+  body {
+      background-image:url(/em/images/Tucson-Arizona.jpg);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+  }
+
+  .navbar {
+      backdrop-filter: none; /* No blur */
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+      position: relative;
+      z-index: 1030;
+      overflow: visible; /* Important: lets dropdowns show */
+  }
+
+  .navbar-brand {
+      font-size: 2rem;
+  }
+
+  .nav-item .dropdown-item {
+      font-size: .9rem;
+  }
+
+  .navbar .nav-item {
+      text-decoration: underline 0.15em transparent;
+      text-underline-offset: 0.2em;
+      transition: text-decoration-color 300ms, text-underline-offset 300ms;
+      font-weight: 600;
+  }
+
+  .navbar .nav-item:hover {
+      text-decoration-color: rgb(255, 255, 255);
+      text-underline-offset: 0.4em;
+  }
+
+  /* Dropdown on hover */
+  .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+  }
+
+  /* Make dropdown visible and above everything */
+  .dropdown-menu {
+      z-index: 9999;
+      position: absolute;
+  }
+
+  /* overlay */
+  .mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Start transparent */
+    z-index: 1040;
+    opacity: 0;
+    visibility: hidden;
+    transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
   }
 
   .mobile-overlay.show {
-    display: block;
+    background-color: rgba(0, 0, 0, 0.5); /* Tinted color */
+    opacity: 1;
+    visibility: visible;
   }
+    
 
-  body.no-scroll {
-    overflow: hidden;
-  }
-
-  .menu-label {
-    font-weight: 600;
-    font-size: 0.75rem;
-    color: #555;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-top: 2rem;
-    margin-bottom: 0.75rem;
-  }
-  
-  .mobile-menu-items a {
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #222;
-    display: block;
-  }
-  
-  .close-btn {
-    font-size: 2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: block;
-    margin-left: auto;
-    margin-bottom: 2rem;
-  }
-  
-  /* Hide mobile menu on desktop */
-  /* @media (min-width: 992px) {
-    .mobile-menu,
-    .mobile-overlay {
-      display: none !important;
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 250px;
+      height: 100%;
+      background: white;
+      z-index: 1050;
+      transition: right 0.3s ease;
+      padding: 1.5rem;
+      box-shadow: -2px 0 6px rgba(0, 0, 0, 0.2);
     }
-  } */
-  
 
-/* Carousel Styles */
-
-.hero-img {
-    height: 550px;
-    object-fit: contain;
-    width: 100%;
-  }  
-
-  @media (max-width: 768px) {
-    .hero-img {
-      height: 300px;
-      object-position: center;
+    .mobile-menu.show {
+      right: 0;
     }
-  }  
 
-/* Footer */
-  
-.footer-hover {
-    text-decoration: underline 0.15em transparent;
-    text-underline-offset: 0.2em;
-    transition: text-decoration-color 300ms, text-underline-offset 300ms;
-}
-
-.footer-hover:hover {
-    text-decoration-color: rgb(255, 255, 255);
-    text-underline-offset: 0.4em;
-}
-
-/* Sermon Page Styling */
-
-#sermonContent .btn-primary {
-    display: block;
-    margin: 20px auto; /* Center the "Show More" button */
-}
-
-.sidebar {
-    position: sticky;
-    top: 80px;
-    z-index: 1020;
-}
-.sidebar a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: block;
-}
-.sidebar a:hover {
-    background-color: #495057;
-    color:white;
-}
-
-.sermon {
-    background-color: #fff;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    transition:150ms ease-in-out;
-}
-.sermon:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-#searchInput {
-    margin-bottom: 20px;
-}
-
-/* Hide sidebar on small screens */
-@media (max-width: 768px) {
-    .sidebar {
-        display: none;
-    }
-    .dropdown-toggle {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-.dropdown-menu {
-    padding: 10px;
-    min-width: 200px;
-    background-color: #f8f9fa;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.dropdown-item {
-    padding: 10px 15px;
-    font-size: 16px;
-    border-bottom: 1px solid #e9ecef;
-}
-
-.dropdown-item:hover {
-    background-color: #495057;
-    color: #ffffff;
-}
-
-.dropdown-item.active {
-    background-color: #343a40;
-    color: #ffffff;
-    font-weight: bold;
-}
-
-.dropdown-item:last-child {
-    border-bottom: none;
-}
-
-.footer {
-    position: relative; /* Ensure footer stays at the bottom of the page */
-    background-color: #343a40;
-    color: #fff;
-    padding: 20px;
-}
-
-/* About TTLC Page */
-.aboutush1 {
-    color: #49c0ee;
-}
-
-/* Service Times */
-.service-times {
-    gap: 2rem;
-  }
-  
-  .service-card {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ccc; /* Optional border to resemble a card */
-    border-radius: 10px;
-  }
-  
-  /* Mobile styles */
-  @media (max-width: 768px) {
-    .service-times {
-      justify-content: center;
-      gap: 1rem;
-    }
-  
-    .service-card {
-      font-size: 0.9rem;
-      padding: 8px;
-      flex: 1; /* This ensures the cards shrink to fit the space */
-      border: 1px solid #343a40; /* Dark border to match footer background */
-      background-color: #343a40;
-    }
-  
-    .service-card strong {
+    .mobile-overlay.show {
       display: block;
-      margin-top: 5px;
     }
-  
-    .service-card p {
-      margin: 0;
+
+    body.no-scroll {
+      overflow: hidden;
     }
+
+    .menu-label {
+      font-weight: 600;
+      font-size: 0.75rem;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .mobile-menu-items a {
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #222;
+      display: block;
+    }
+    
+    .close-btn {
+      font-size: 2rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: block;
+      margin-left: auto;
+      margin-bottom: 2rem;
+    }
+    
+    /* Hide mobile menu on desktop */
+    /* @media (min-width: 992px) {
+      .mobile-menu,
+      .mobile-overlay {
+        display: none !important;
+      }
+    } */
+    
+
+  /* Carousel Styles */
+
+  .hero-img {
+      height: 550px;
+      object-fit: contain;
+      width: 100%;
+    }  
+
+    @media (max-width: 768px) {
+      .hero-img {
+        height: 300px;
+        object-position: center;
+      }
+    }  
+
+  /* Footer */
+    
+  .footer-hover {
+      text-decoration: underline 0.15em transparent;
+      text-underline-offset: 0.2em;
+      transition: text-decoration-color 300ms, text-underline-offset 300ms;
   }
 
-  /* Youth Page Styling */
-  
-  .event-carousel img {
-    width: 100%;
-    height: 400px; /* Set the desired height */
-    object-fit: cover; /* Ensures images fill the container without distortion */
-}
-
-/* News Page Styling */
-
-.news {
-    background-color: #fff;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    transition:150ms ease-in-out;
-}
-.news:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-/* Toast */
-#eventToast {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    z-index: 1050; /* Make sure it's above other content */
+  .footer-hover:hover {
+      text-decoration-color: rgb(255, 255, 255);
+      text-underline-offset: 0.4em;
   }
 
-/* Pastor Cards */
-.section-title {
-    font-weight: bold;
+  /* Sermon Page Styling */
+
+  #sermonContent .btn-primary {
+      display: block;
+      margin: 20px auto; /* Center the "Show More" button */
   }
-  .divider-line {
-    height: 5px;
-    background-color: #49c0ee;
-    margin-bottom: 2rem;
+
+  .sidebar {
+      position: sticky;
+      top: 80px;
+      z-index: 1020;
   }
-  .pastor-card {
-    background-color: #f2f5f8;
-    border-radius: 15px;
-    padding: 2rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  .sidebar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: block;
   }
-  .pastor-img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 1rem;
+  .sidebar a:hover {
+      background-color: #495057;
+      color:white;
   }
-  .contact-link {
-    background-color: #49c0ee;
-    color: white;
-    font-weight: bold;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    margin: 1rem 0;
-    text-decoration: none;
-    display: inline-block;
+
+  .sermon {
+      background-color: #fff;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      transition:150ms ease-in-out;
   }
-  .contact-link:hover {
-    background-color: #3ca0c8;
-    color: white;
+  .sermon:hover {
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
+  #searchInput {
+      margin-bottom: 20px;
+  }
+
+  /* Hide sidebar on small screens */
+  @media (max-width: 768px) {
+      .sidebar {
+          display: none;
+      }
+      .dropdown-toggle {
+          width: 100%;
+          margin-bottom: 20px;
+      }
+  }
+
+  .dropdown-menu {
+      padding: 10px;
+      min-width: 200px;
+      background-color: #f8f9fa;
+      border-radius: 5px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdown-item {
+      padding: 10px 15px;
+      font-size: 16px;
+      border-bottom: 1px solid #e9ecef;
+  }
+
+  .dropdown-item:hover {
+      background-color: #495057;
+      color: #ffffff;
+  }
+
+  .dropdown-item.active {
+      background-color: #343a40;
+      color: #ffffff;
+      font-weight: bold;
+  }
+
+  .dropdown-item:last-child {
+      border-bottom: none;
+  }
+
+  .footer {
+      position: relative; /* Ensure footer stays at the bottom of the page */
+      background-color: #343a40;
+      color: #fff;
+      padding: 20px;
+  }
+
+  /* About TTLC Page */
+  .aboutush1 {
+      color: #49c0ee;
+  }
+
+  /* Service Times */
+  .service-times {
+      gap: 2rem;
+    }
+    
+    .service-card {
+      text-align: center;
+      padding: 10px;
+      border: 1px solid #ccc; /* Optional border to resemble a card */
+      border-radius: 10px;
+    }
+    
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      .service-times {
+        justify-content: center;
+        gap: 1rem;
+      }
+    
+      .service-card {
+        font-size: 0.9rem;
+        padding: 8px;
+        flex: 1; /* This ensures the cards shrink to fit the space */
+        border: 1px solid #343a40; /* Dark border to match footer background */
+        background-color: #343a40;
+      }
+    
+      .service-card strong {
+        display: block;
+        margin-top: 5px;
+      }
+    
+      .service-card p {
+        margin: 0;
+      }
+    }
+
+    /* Youth Page Styling */
+    
+    .event-carousel img {
+      width: 100%;
+      height: 400px; /* Set the desired height */
+      object-fit: cover; /* Ensures images fill the container without distortion */
+  }
+
+  /* News Page Styling */
+
+  .news {
+      background-color: #fff;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      transition:150ms ease-in-out;
+  }
+  .news:hover {
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+
+  /* Toast */
+  #eventToast {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      z-index: 1050; /* Make sure it's above other content */
+    }
+
+  /* Pastor Cards */
+  .section-title {
+      font-weight: bold;
+    }
+    .divider-line {
+      height: 5px;
+      background-color: #49c0ee;
+      margin-bottom: 2rem;
+    }
+    .pastor-card {
+      background-color: #f2f5f8;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .pastor-img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .contact-link {
+      background-color: #49c0ee;
+      color: white;
+      font-weight: bold;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      margin: 1rem 0;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .contact-link:hover {
+      background-color: #3ca0c8;
+      color: white;
+    }
+
+    /* Adult Education Styling */
+
+    .sidebar-nav2 {
+      padding: 20px;
+    }
+    
+    .sidebar-nav2 .nav-link {
+      background-color: transparent;
+      color: white;
+      padding: 12px 16px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-align: left;
+      border: none;
+      border-bottom: 1px dotted #555;
+      border-radius: 0;
+      margin-bottom: 0;
+      transition: all 0.2s ease;
+    }
+    
+    .sidebar-nav2 .nav-link:last-child {
+      border-bottom: none;
+    }
+    
+    .sidebar-nav2 .nav-link:hover {
+      background-color: #333;
+      color: white;
+    }
+    
+    .sidebar-nav2 .nav-link.active {
+      background-color: #52b788; /* or any highlight color you prefer */
+      color: white;
+    }
+    
+    .tab-pane {
+      padding: 0 40px;
+    }
