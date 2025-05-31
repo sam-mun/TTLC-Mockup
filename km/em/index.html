@@ -59,6 +59,15 @@
 			<li class="nav-item">
 				<a class="nav-link mx-2 text-white" href="about/">About Us</a>
 			</li>
+			<li class="nav-item dropdown" style="position: relative;">
+				<a class="nav-link dropdown-toggle mx-2 text-white" href="#" id="dropdownMenuLink" role="button">
+				Our Community
+				</a>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<li><a class="dropdown-item" href="news/">Church News</a></li>
+				<li><a class="dropdown-item" href="gallery/">Image Gallery</a></li>
+				</ul>
+			</li>
 			<li class="nav-item">
 				<a class="nav-link mx-2 text-white" href="construction.html">Give</a>
 			</li>
@@ -102,6 +111,15 @@
 			</ul>
 		  </div>
 	  
+		  <!-- Our Community -->
+		<div class="mobile-menu-section">
+			<h6 class="menu-label">Our Community</h6>
+			<ul class="mobile-menu-items">
+			  <li><a href="news/">Church News</a></li>
+			  <li><a href="gallery/">Image Gallery</a></li>
+			</ul>
+		  </div>
+	
 		<!-- Giving Section -->
 		<div class="mobile-menu-section">
 		  <h6 class="menu-label">Giving</h6>
@@ -118,6 +136,31 @@
 		  </ul>
 		</div>
 	  </div>
+
+	  <!-- VBS Modal HTML -->
+<div class="modal fade" id="vbsModal" tabindex="-1" aria-labelledby="vbsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content text-center">
+      <div class="modal-header bg-warning">
+        <h5 class="modal-title w-100 fw-bold" id="vbsModalLabel">🎉 VBS 2024 Registration is Open! June 19-21</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="fs-5">Join us for an exciting week of Vacation Bible School! Register now and let your kids discover God's love in a fun and interactive way.</p>
+        <a href="https://forms.gle/X9irfcrgoTPQTXYJ6" target="_blank" class="btn btn-primary btn-lg mt-2">📋 Register Now</a>
+        <p class="text-muted mt-3 mb-0">Location: Tucson True Light Church | More info coming soon</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Auto Show on Load Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var vbsModal = new bootstrap.Modal(document.getElementById('vbsModal'));
+    vbsModal.show();
+  });
+</script>
 
 	<!-- Carousel -->
 	<!-- Carousel Wrapper -->
@@ -139,6 +182,9 @@
 			</div>
 			<div class="carousel-item">
 				<img src="images/youth.jpg" class="d-block w-100 hero-img" alt="Slide 5">
+			</div>
+			<div class="carousel-item">
+				<img src="images/church_retreat.jpg" class="d-block w-100 hero-img" alt="Slide 5">
 			</div>
 			</div>
 	
